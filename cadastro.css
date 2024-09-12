@@ -1,0 +1,186 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Usado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background: rgba(0, 0, 0, 0.5); /* Adiciona uma cor de fundo escura para o efeito fumê */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/image6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2; /* Coloca a imagem de fundo atrás da camada fumê */
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: -1; /* Coloca a camada fumê atrás do conteúdo */
+}
+
+.container {
+    background-color: #333; /* Cor cinza escura para a caixa de cadastro */
+    padding: 20px;
+    border: 1px solid #333; /* Borda cinza escura */
+    border-radius: 0; /* Remove o arredondamento das bordas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1; /* Garante que a logo fique sobre o efeito fumê */
+}
+
+.logo-container img {
+    height: 50px;
+    width: auto;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: normal; /* Define o peso da fonte como normal */
+    font-style: normal; /* Define o estilo da fonte como normal */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal; /* Define o peso da fonte como normal */
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555; /* Borda cinza clara */
+    border-radius: 0; /* Remove o arredondamento das bordas dos inputs */
+    background-color: #444; /* Cor cinza mais clara para os inputs */
+    color: #fff;
+    box-sizing: border-box;
+    font-weight: normal; /* Define o peso da fonte como normal */
+    font-style: normal; /* Define o estilo da fonte como normal */
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #e50914;
+    background-color: #555; /* Cor cinza mais escura ao focar */
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-group i {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 0; /* Remove o arredondamento das bordas do botão */
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: normal; /* Define o peso da fonte como normal */
+    font-style: normal; /* Define o estilo da fonte como normal */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f40612;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.login-link a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .logo-container img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    .logo-container img {
+        height: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+        font-size: 14px;
+    }
+
+    .password-group i {
+        font-size: 16px;
+    }
+}

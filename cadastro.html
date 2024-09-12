@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="assets/logofilmo.png" alt="Logo">
+        </a>
+    </div>    
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            </div>
+            <div class="form-group password-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+                <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+            <div class="form-group password-group">
+                <label for="confirmar-senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
+                <i class="fas fa-eye" id="toggleConfirmPassword"></i>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
